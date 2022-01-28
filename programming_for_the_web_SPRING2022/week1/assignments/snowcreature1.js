@@ -1,13 +1,13 @@
-let grid = undefined;
+//let grid = undefined;
 let stroke1 = prompt("enter a basic color name in lower case", "aqua");
 let stroke2 = prompt("enter a basic color name in lower case", "steelblue");
 function setup() {
     createCanvas(1000, 800);
     background("#ccc");
-    grid = loadImage("images/100px_grid.png");
+    //grid = loadImage("images/100px_grid.png");
 }
 function draw() {
-    background(grid);
+   // background(grid);
     //legs
     fill("#f1f1f1");
     strokeWeight(20);
