@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="llamas.css"/>
+  </head>
+
+  <body class="home-page">
+    <img src="moth.jpg" alt="photo of a purple moth"><img src="Zeppelin.jpeg" alt="photo of the band Led Zeppelin"><img src="ruffles.jpeg" alt="photo of Ruffles chips"><img src="neon.jpg" alt="photo of a Dodge Neon car"><img src="canada.jpeg" alt="photo of Montreal Canada"><img src="tylenol.jpeg" alt="photo of Tylenol pills">
+
+    <div id="myInfo" class="">
+      <h1>A Few Llama Favorites</h1>
+      <ul>
+          <span v-if ="llamaFriend==='Moth'">
+              <li>Favorite Animal Friend: {{llamaFriend}}</li></span>
+              <span v-else ="llamaFriend!=='Moth'"></span>
+          <li>Favorie Color: {{llamaColor}}</li>
+          <li>Favorite Snack: {{llamaSnack}}</li>
+          <li>Favorite Car: {{llamaCar}}</li>
+          <li>Favorite Destination: {{llamaTrip}}</li>
+          <li>Favorite Band: {{llamaBand}}</li>
+          <li>Favorite Drug: {{llamaDrug}}</li>
+          <li>Favorite Department Store: {{llamaStore}}</li>
+          <li>Favorite Type of Shirt: {{llamaShirt}}</li>
+          <li>Favorite Curse Word: {{llamaCurse}}</li>
+      </ul>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="llamas.js"></script>
+  </body>
+</html>
