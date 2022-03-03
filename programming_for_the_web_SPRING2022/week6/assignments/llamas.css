@@ -4,12 +4,13 @@ body {
     text-align: center;
 }
 img {
-    height: 200px;
-    width: 200px;
+    height: 220px;
+    width: 220px;
 }
 
 ul {
     list-style-type: none;
+    font-size: 25px;
     line-height: 35px;
 }
 

@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="camelids.css"/>
+    <script src="https://unpkg.com/vue@3"></script>
+  </head>
+
+  <body>
+
+    <div id="myApp" v-cloak>
+      <h1>{{ title }}</h1>
+      <table>
+        <tr v-bind:style="{background:'aqua'}">
+          <th></th>
+          <th>Size</th>
+          <th>Weight</th>
+          <th>Face</th>
+          <th>Ears</th>
+          <th>Fleece</th>
+          <th>Ancestor</th>
+          <th>Personality</th>
+          <th>Purpose</th>
+        </tr>
+        <tr v-bind:class="{highlight: featuredAnimal==='Alpaca'}">
+          <th>{{ titleAlpaca }}</th>
+          <td>{{ sizeAlpaca }}</td>
+          <td>{{ weightAlpaca }}</td>
+          <td>{{ faceAlpaca }}</td>
+          <td>{{ earsAlpaca }}</td>
+          <td>{{ fleeceAlpaca }}</td>
+          <td>{{ ancestorAlpaca }}</td>
+          <td>{{ personalityAlpaca }}</td>
+          <td>{{ purposeAlpaca }}</td>
+        </tr>
+        <tr v-bind:class="{highlight: featuredAnimal==='Llama'}">
+          <th>{{ titleLlama }}</th>
+          <td>{{ sizeLlama }}</td>
+          <td>{{ weightLlama }}</td>
+          <td>{{ faceLlama }}</td>
+          <td>{{ earsLlama }}</td>
+          <td>{{ fleeceLlama }}</td>
+          <td>{{ ancestorLlama }}</td>
+          <td>{{ personalityLlama }}</td>
+          <td>{{ purposeLlama }}</td>
+        </tr>
+      </table>
+      <p>Thanks so much to 2 fantastic websites for helping us learn about the differences between Alpacas and Llamas!<p>
+      <p><a v-bind:href="webInfo1">{{ webInfo1Name }}</a></p>
+      <p><a v-bind:href="webInfo2">{{ webInfo2Name }}</a></p>
+      
+      </div>
+
+      <script src="camelids.js"></script>
+  </body>
+</html>

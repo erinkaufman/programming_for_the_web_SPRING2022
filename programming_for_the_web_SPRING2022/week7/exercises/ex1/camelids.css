@@ -1,0 +1,30 @@
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+table {
+    margin-left: 20px;
+    margin-right: 20px;
+    border: thin solid black;
+}
+
+td, th {
+    border: thin solid black;
+    padding: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.highlight {
+    color: violet;
+}
+
+[v-cloak] {
+    display: none;
+}
