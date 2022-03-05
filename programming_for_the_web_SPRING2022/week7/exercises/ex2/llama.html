@@ -18,7 +18,7 @@
       
       <div v-for="(entry, index) in llamas" v-bind:class="{odd: (index + 1) % 2 !== 0}">
         <span class="rank">{{ entry.rank }}</span>
-        <span class="name" v-bind:class="{special: entry.name.includes('Llama')}">{{ entry.name }}</span>
+        <span class="name" v-bind:class="{special: entry.name.toLowerCase().includes('llama')}">{{ entry.name }}</span>
       </div>
 
     </div>
