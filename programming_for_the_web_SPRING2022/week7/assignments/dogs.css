@@ -1,0 +1,51 @@
+html {
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .dog-list-title {
+    border-bottom: 5px solid lightpink;
+    margin: 25px auto;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    height: 75px;
+    padding-top: 25px;
+  }
+
+  .list-container {
+    padding: 5px;
+  }
+  .list-head .name, .list-head .weight, .list-head .lifespan, .list-head .personality {
+    display: inline-block;
+    width: 15%;
+    text-align: left;
+    font-weight: 800;
+    padding-left: 10px;
+  }
+  .list-head .quote {
+    display: inline-block;
+    width: 30%;
+    text-align: left;
+    font-weight: 800;
+  }
+  
+  .name, .weight, .lifespan, .personality {
+    display: inline-block;
+    width: 15%;
+    text-align: left;
+    height: 50px;
+    padding-left: 10px;
+  }
+  .personality {
+      margin-right: 40px;
+  }
+  
+  .quote {
+    display: inline-block;
+    width: 30%;
+    text-align: left;
+  }
+
+  .odd {
+    background: lightpink;
+  }

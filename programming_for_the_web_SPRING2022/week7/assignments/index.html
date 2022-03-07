@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="dogs.css">
+  <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+  <div id="dogWishes">
+    <h1 class="dog-list-title">My Future Collection of Dogs</h1>
+    <div class="list-container">
+      <div class="list-head">
+        <span class="name">Name</span>
+        <span class="weight">Weight</span>
+        <span class="lifespan">Lifespan</span>
+        <span class="personality">Personality</span>
+        <span class="quote">Quote</span>
+      </div>
+      
+      <div v-for="(entry, index) in dogs" v-bind:class="{odd: (index + 1) % 2 !== 0}">
+        <span class="name">{{ entry.name }}</span>
+        <span class="weight">{{ entry.weight }}</span>
+        <span class="lifespan">{{ entry.lifespan }}</span>
+        <span class="personality">{{ entry.personality }}</span>
+        <span class="quote">{{ entry.quote }}</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="dogs.js"></script>
+</body>
+
+</html>
