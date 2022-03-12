@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="dogs.css">
+  <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+  <div id="dogWishes">
+    <h1 class="dog-list-title">My Future Collection of Dogs</h1>
+    <div class="list-container">
+      <div class="list-head">
+        <span class="name">Name</span>
+        <span class="weight">Weight</span>
+        <span class="lifespan">Lifespan</span>
+        <span class="personality">Personality</span>
+        <span class="quote">Quote</span>
+      </div>
+      
+      <div v-for="(entry, index) in dogs" v-bind:class="{odd: (index + 1) % 2 !== 0}">
+        <span class="name">{{ entry.name }}</span>
+        <span class="weight">{{ entry.weight }}</span>
+        <span class="lifespan">{{ entry.lifespan }}</span>
+        <span class="personality">{{ entry.personality }}</span>
+        <span class="quote">{{ entry.quote }}</span>
+        <button type="button" v-on:click="handleDelete(dog)">Delete Dog</button>
+      </div>
+
+    </div>
+    
+    <form v-on:submit.prevent="handleSubmit">
+      <fieldset>
+        <legend>Add a new doggo to my future collection!</legend>
+          <div>
+            <label for="dogName">Name of New Dog</label>
+            <input v-model="newDogName" id="dogName" type="text">
+          </div>
+          <div>
+            <label for="dogWeight">Weight of New Dog</label>
+            <input v-model="newDogWeight" id="dogWeight" type="text">
+          </div>
+          <div>
+            <label for="dogLifespan">Lifespan of New Dog</label>
+            <input v-model="newDogLifespan" id="dogLifespan" type="text">
+          </div>
+          <div>
+            <label for="dogPersonality">Personality of New Dog</label>
+            <input v-model="newDogPersonality" id="dogPersonality" type="text">
+          </div>
+          <div>
+            <label for="dogQuote">Quote about New Dog</label>
+            <input v-model="newDogQuote" id="dogQuote" type="text">
+          </div>
+      </fieldset>
+      <button type="submit" :disabled="!isValid()">Add New Dog to the Collection!</button>
+    </form>
+
+  </div>
+
+  <script src="dogs.js"></script>
+</body>
+
+</html>
