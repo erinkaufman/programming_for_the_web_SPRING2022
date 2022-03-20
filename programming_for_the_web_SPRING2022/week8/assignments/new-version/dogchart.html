@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="dogs.css">
+  <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+  <div id="dogWishes">
+    <h1 class="dog-list-title">My Future Collection of Dogs</h1>
+    <div class="list-container">
+      <table>
+        <tr>
+          <th>Photo</th>
+          <th>Name</th>
+          <th>Weight</th>
+          <th>Lifespan</th>
+          <th>Personality</th>
+          <th>Quote</th>
+        </tr>
+
+        <tr v-for="(entry, index) in dogs" v-bind:class="{even: (index + 1) % 2 ===0, odd: (index + 1) % 2 !== 0}">
+          <td><img :src="entry.photo"></td>
+          <td>{{ entry.name }}</td>
+          <td>{{ entry.weight }}</td>
+          <td>{{ entry.lifespan }}</td>
+          <td>{{ entry.personality }}</td>
+          <td>{{ entry.quote }}</td>
+          <td><button type="button" v-on:click="handleDelete(entry)">x</button></td>
+        </tr>
+      </table>
+    </div>
+    
+    <form v-on:submit.prevent="handleSubmit">
+      <fieldset>
+        <legend>Add to my future collection</legend>
+          <div class="form-input">
+            <label for="dogPhoto">Photo of New Dog</label>
+            <input v-model="newDogPhoto" id="dogName" type="text">
+          </div>
+          <div class="form-input">
+            <label for="dogName">Name of New Dog</label>
+            <input v-model="newDogName" id="dogName" type="text">
+          </div>
+          <div class="form-input">
+            <label for="dogWeight">Weight of New Dog</label>
+            <input v-model="newDogWeight" id="dogWeight" type="text">
+          </div>
+          <div class="form-input">
+            <label for="dogLifespan">Lifespan of New Dog</label>
+            <input v-model="newDogLifespan" id="dogLifespan" type="text">
+          </div>
+          <div class="form-input">
+            <label for="dogPersonality">Personality of New Dog</label>
+            <input v-model="newDogPersonality" id="dogPersonality" type="text">
+          </div>
+          <div class="form-input">
+            <label for="dogQuote">Quote about New Dog</label>
+            <input v-model="newDogQuote" id="dogQuote" type="text">
+          </div>
+          <button class="form-add-button" type="submit" :disabled="!isValid()">Add Doggo!</button>
+
+      </fieldset>
+    </form>   
+
+  </div>
+
+  <script src="dogs.js"></script>
+</body>
+
+</html>
