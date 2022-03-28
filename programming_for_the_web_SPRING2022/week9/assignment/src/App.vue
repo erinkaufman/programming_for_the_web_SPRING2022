@@ -53,7 +53,24 @@ const newDogObj = {
   newDogPersonality: "",
   newDogQuote: ""
 };
-const state = reactive ({dogs: dogs, newDogObj: newDogObj})
+const state = reactive ({dogs: dogs, newDogObj: newDogObj});
+
+function handleSubmit() {
+  state.dogs.push({
+    photo: state.newDogObj.newDogPhoto,
+    title: state.newDogObj.newDogName,
+    weight: state.newDogObj.newDogWeight,
+    lifespan: state.newDogObj.newDogLifespan,
+    personality: state.newDogObj.newDogPersonality,
+    quote: state.newDogObj.newDogQuote
+  });
+  state.newDogObj.newDogPhoto = "";
+  state.newDogObj.newDogName = "";
+  state.newDogObj.newDogWeight = "";
+  state.newDogObj.newDogLifespan = "";
+  state.newDogObj.newDogPersonality = "";
+  state.newDogObj.newDogQuote = "";
+}
 
 </script>
 
@@ -74,7 +91,7 @@ const state = reactive ({dogs: dogs, newDogObj: newDogObj})
           <th>Quote</th>
         </tr>
 
-        <ItemRow v-for="(entry, index) in state.dogs" v-bind:key="index" v-bind:class="{even: (index + 1) % 2 ===0, odd: (index + 1) % 2 !== 0}" v-bind:item= "entry" />
+        <ItemRow v-for="(entry, index) in state.dogs" v-bind:key="index" v-bind:class="{even: (index + 1) % 2 ===0, odd: (index + 1) % 2 !== 0}" v-bind:entry= "entry" />
 
 
       </table>
@@ -85,11 +102,11 @@ const state = reactive ({dogs: dogs, newDogObj: newDogObj})
         <legend>Add to my future collection</legend>
           <div class="form-input">
             <label for="dogPhoto">Photo of New Dog</label>
-            <input v-model="newDogPhoto" id="dogName" type="text">
+            <input v-model="newDogPhoto" id="dogPhoto" type="text">
           </div>
           <div class="form-input">
             <label for="dogName">Name of New Dog</label>
-            <input v-model="newDogName" id="dogName" type="text">
+            <input v-model="newDogTitle" id="dogName" type="text">
           </div>
           <div class="form-input">
             <label for="dogWeight">Weight of New Dog</label>

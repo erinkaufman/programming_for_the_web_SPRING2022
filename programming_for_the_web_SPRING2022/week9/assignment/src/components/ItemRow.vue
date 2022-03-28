@@ -9,7 +9,7 @@ console.log('the entry', props.entry);
 
         <tr>
           <td><img :src="entry.photo"></td>
-          <td>{{ entry.name }}</td>
+          <td>{{ entry.title }}</td>
           <td>{{ entry.weight }}</td>
           <td>{{ entry.lifespan }}</td>
           <td>{{ entry.personality }}</td>
