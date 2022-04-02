@@ -14,7 +14,7 @@ console.log('the entry', props.entry);
           <td>{{ entry.lifespan }}</td>
           <td>{{ entry.personality }}</td>
           <td>{{ entry.quote }}</td>
-          <td><button type="button" v-on:click="handleDelete(entry)">x</button></td>
+          <td><button type="button" v-on:click="$emit('deleteItem', item)">x</button></td>
         </tr>
 
 </template>
