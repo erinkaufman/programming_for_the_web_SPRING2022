@@ -8,13 +8,13 @@ console.log('the entry', props.entry);
 <template>
 
         <tr>
-          <td><img :src="entry.photo"></td>
+          <td><img :src="'images/' + entry.photo"></td>
           <td>{{ entry.name }}</td>
           <td>{{ entry.weight }}</td>
           <td>{{ entry.lifespan }}</td>
           <td>{{ entry.personality }}</td>
           <td>{{ entry.quote }}</td>
-          <td><button type="button" v-on:click="$emit('deleteItem', item)">x</button></td>
+          <td><button type="button" v-on:click="$emit('deleteItem', entry)">x</button></td>
         </tr>
 
 </template>

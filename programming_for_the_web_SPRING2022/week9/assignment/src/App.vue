@@ -81,6 +81,7 @@ function handleSubmit() {
 }
 
 function handleDelete(itemToDelete) {
+  console.log(itemToDelete);
   state.dogs = state.dogs.filter((itemToCheck) => {
   return itemToDelete !== itemToCheck;
   });
@@ -116,27 +117,27 @@ function handleDelete(itemToDelete) {
         <legend>Add to my future collection</legend>
           <div class="form-input">
             <label for="dogPhoto">Photo of New Dog</label>
-            <input v-model="newDogPhoto" id="dogPhoto" type="text">
+            <input v-model="state.newDogObj.newDogPhoto" id="dogPhoto" type="text">
           </div>
           <div class="form-input">
             <label for="dogName">Name of New Dog</label>
-            <input v-model="newDogTitle" id="dogName" type="text">
+            <input v-model="state.newDogObj.newDogName" id="dogName" type="text">
           </div>
           <div class="form-input">
             <label for="dogWeight">Weight of New Dog</label>
-            <input v-model="newDogWeight" id="dogWeight" type="text">
+            <input v-model="state.newDogObj.newDogWeight" id="dogWeight" type="text">
           </div>
           <div class="form-input">
             <label for="dogLifespan">Lifespan of New Dog</label>
-            <input v-model="newDogLifespan" id="dogLifespan" type="text">
+            <input v-model="state.newDogObj.newDogLifespan" id="dogLifespan" type="text">
           </div>
           <div class="form-input">
             <label for="dogPersonality">Personality of New Dog</label>
-            <input v-model="newDogPersonality" id="dogPersonality" type="text">
+            <input v-model="state.newDogObj.newDogPersonality" id="dogPersonality" type="text">
           </div>
           <div class="form-input">
             <label for="dogQuote">Quote about New Dog</label>
-            <input v-model="newDogQuote" id="dogQuote" type="text">
+            <input v-model="state.newDogObj.newDogQuote" id="dogQuote" type="text">
           </div>
           <button class="form-add-button" type="submit">Add Doggo!</button>
 
