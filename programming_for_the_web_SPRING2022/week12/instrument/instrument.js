@@ -141,7 +141,6 @@ function loaded () {
 
 function playNote () {
         note.play();
-        fill(col9);
     }
 
 function playNote2 () {
@@ -178,4 +177,8 @@ function playNote9 () {
 
 function draw () {
     background(bg);
+    let s = 'Click anywhere to start the sweet Hawaiian stylings';
+    fill(255);
+    textFont('monospace');
+    text(s, 115, 550);
 }
