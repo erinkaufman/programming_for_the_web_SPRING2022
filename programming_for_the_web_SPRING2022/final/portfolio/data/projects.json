@@ -1,0 +1,50 @@
+[
+    {
+      "photo": "loop-portfolio-1.jpeg",
+      "photo2": "loop-portfolio-2.jpeg",
+      "photo3": "loop-portfolio-3.jpeg",
+      "photo4": "loop-portfolio-4.jpeg",
+      "name": "Loop Magazine Layout",
+      "course": "Typography",
+      "completed": "May 2021",
+      "skills": "Adobe InDesign, Adobe Photoshop",
+      "description": "In this project, I created cover art and interior pages for articles of differing content styles, and throughout the project brought a focus to typography and hierarchy.",
+      "id": 1
+    },
+    {
+      "photo": "lepavot-brand-portfolio-1.jpeg",
+      "photo2": "lepavot-brand-portfolio-2.jpeg",
+      "photo3": "lepavot-brand-portfolio-3.jpeg",
+      "photo4": "lepavot-brand-portfolio-4.jpeg",
+      "name": "Le Pavot Branding System",
+      "course": "Typography",
+      "completed": "May 2021",
+      "skills": "Adobe InDesign, Adobe Photoshop",
+      "description": "For the final project in my Typography course, I developed a branding system for an imagined business, from logo and print collateral design to interior and exterior signage design. I started with concept and logo development, set up brand guidelines for color, typography, illustration, and logo usage, and then flowed that system cohesively through each project element.",
+      "id": 2
+    },
+    {
+      "photo": "lepavot-web-portfolio-1.jpeg",
+      "photo2": "lepavot-web-portfolio-2.jpeg",
+      "photo3": "lepavot-web-portfolio-3.jpeg",
+      "photo4": "lepavot-web-portfolio-4.jpeg",
+      "name": "Le Pavot Website",
+      "course": "Web Development",
+      "completed": "May 2021",
+      "skills": "HTML, CSS",
+      "description": "I opted to design a multiple-page website for my Web Development course using the same “Le Pavot” concept from my concurrent course, Typography. This project was a demonstration of creating a functional, systematically styled set of pages, particularly through using CSS classes and concise, organized HTML.",
+      "id": 3
+    },
+    {
+      "photo": "michaels-portfolio-1.jpeg",
+      "photo2": "michaels-portfolio-2.jpeg",
+      "photo3": "michaels-portfolio-3.jpeg",
+      "photo4": "michaels-portfolio-4.jpeg",
+      "name": "Michaels Website Re-Design",
+      "course": "Web Design",
+      "completed": "December 2021",
+      "skills": "Figma",
+      "description": "In this project, I re-designed a selected website with an unexpected target audience in mind. I chose the website for the craft store Michaels, and updated the branding system, website organization and content, and functionality to match up with a 26-year-old, artistic and eclectic young woman who's interested in sites like Etsy, crafting with an entrepreneurial mindset, and building community.",
+      "id": 4
+    }
+  ]

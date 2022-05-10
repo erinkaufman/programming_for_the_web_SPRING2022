@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="portfolio.css">
+  <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+  <div id="portfolio">
+    <h1>My Portfolio Collection</h1>
+    <div class="list-container">
+      <table>
+        <tr>
+          <th>Photo</th>
+          <th>Name</th>
+          <th>Course</th>
+          <th>Completed</th>
+          <th>Skills</th>
+          <th>Description</th>
+        </tr>
+
+        <tr v-for="(entry, index) in projects" v-bind:class="{even: (index + 1) % 2 ===0, odd: (index + 1) % 2 !== 0}">
+          <td><img :src="entry.photo"></td>
+          <td>{{ entry.name }}</td>
+          <td>{{ entry.course }}</td>
+          <td>{{ entry.completed }}</td>
+          <td>{{ entry.skills }}</td>
+          <td>{{ entry.description }}</td>
+          <td><button type="button" v-on:click="handleDelete(entry)">x</button></td>
+        </tr>
+      </table>
+    </div>
+    
+    <form v-on:submit.prevent="handleSubmit">
+      <fieldset>
+        <legend>Add to my portfolio</legend>
+          <div class="form-input">
+            <label for="portPhoto">Photo of New Item</label>
+            <input v-model="newPortPhoto" id="portName" type="text">
+          </div>
+          <div class="form-input">
+            <label for="portName">Name of New Item</label>
+            <input v-model="newPortName" id="portName" type="text">
+          </div>
+          <div class="form-input">
+            <label for="portCourse">Course of New Item</label>
+            <input v-model="newPortCourse" id="portCourse" type="text">
+          </div>
+          <div class="form-input">
+            <label for="portCompleted">Completed Date of New Item</label>
+            <input v-model="newPortCompleted" id="portCompleted" type="text">
+          </div>
+          <div class="form-input">
+            <label for="portSkills">Skills of New Item</label>
+            <input v-model="newPortSkills" id="portSkills" type="text">
+          </div>
+          <div class="form-input">
+            <label for="portDescription">Description of New Item</label>
+            <input v-model="newPortDescription" id="portDescription" type="text">
+          </div>
+          <button class="form-add-button" type="submit" :disabled="!isValid()">Add Portfolio Item!</button>
+
+      </fieldset>
+    </form>   
+
+  </div>
+
+  <script src="portfolio.js"></script>
+</body>
+
+</html>
